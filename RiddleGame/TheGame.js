@@ -11,11 +11,10 @@ const riddle = new Riddle(r1)
 riddle.ask()
 const endTime = Date.now();
 player.recordTime(startTime,endTime);
-console.log(`Great job ${player.name} you end the game!`);
 const stats = player.showStats();
 console.log(`Great job ${player.name}, you finished the game!`);
-console.log(`Total time: ${stats.totalll}`);
-console.log(`Average per riddle: ${stats.averageee}`);
+console.log(`Total time: ${stats.total}`);
+console.log(`Average per riddle: ${stats.average}`);
 
 
 

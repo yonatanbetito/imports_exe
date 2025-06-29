@@ -1,7 +1,5 @@
-const readlineSync = require("readline-sync");
-import r1 from "..Riddles/r1.js";
-
-class Riddle {
+import readlineSync from "readline-sync";
+export class Riddle {
   constructor(id, name, taskDescription, correctAnswer) {
     this.id = id;
     this.name = name;
@@ -10,10 +8,10 @@ class Riddle {
   }
   ask() {
     do {
-      const response = question("enter your response: ");
-    } while (this.correctAnswer !== response);
-    {
-      return true;
-    }
+      const response = readlineSync.question("enter your response: ");
+      if (response === this.correctAnswer) {
+        return true;
+      }
+    } while (true);
   }
 }
