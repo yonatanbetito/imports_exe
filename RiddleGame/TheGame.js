@@ -8,6 +8,7 @@ const name = readlineSync.question("enter your name: ");
 const player = new Player(name);
 const startTime = Date.now();
 const riddle = new Riddle(r1)
+console.log(riddle.taskDescription);
 riddle.ask()
 const endTime = Date.now();
 player.recordTime(startTime,endTime);

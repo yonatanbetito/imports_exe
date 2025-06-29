@@ -1,6 +1,6 @@
 import readlineSync from "readline-sync";
 export class Riddle {
-  constructor(id, name, taskDescription, correctAnswer) {
+  constructor({id, name, taskDescription, correctAnswer}) {
     this.id = id;
     this.name = name;
     this.taskDescription = taskDescription;
@@ -9,7 +9,7 @@ export class Riddle {
   ask() {
     do {
       const response = readlineSync.question("enter your response: ");
-      if (response === this.correctAnswer) {
+      if (response == this.correctAnswer) {
         return true;
       }
     } while (true);
